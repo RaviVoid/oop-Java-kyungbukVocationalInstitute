@@ -9,11 +9,14 @@ public class Main {
 		notice.setTitle("첫번째 공지글입니다.");
 		//객체명.필드 OR 객체명.메소드()
 		System.out.println(notice.getTitle());
-
-		Gallery gallery = new Gallery();
-		gallery.setImgFile("그림.png");
 		
-		System.out.println(gallery.getImgFile());
+		Gallery gallery = new Gallery();
+		//gallery.setImgFile("그림.png");
+		System.out.println(gallery.getFile());
+		
 	}
 
 }
+
+
+

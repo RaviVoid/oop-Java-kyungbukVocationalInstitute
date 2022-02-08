@@ -3,6 +3,7 @@ package ext;
 public class Board {
 	private String title;//제목
 	private String content;//내용
+	private String file;
 	
 	
 	public String getTitle() {
@@ -16,6 +17,12 @@ public class Board {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getFile() {
+		return "모든파일을 처리합니다.";
+	}
+	public void setFile(String file) {
+		this.file = file;
 	}
 	
 	
