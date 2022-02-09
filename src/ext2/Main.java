@@ -13,5 +13,11 @@ public class Main {
 		
 		Teacher teacher = new Teacher("아무개", 50, 170, 60, "20202212");
 		System.out.println(teacher);
+		
+		System.out.println("이름 : " + student1.getName());
+		System.out.println("나이 : " + student1.getAge());
+		System.out.println("키  : " + student1.getHeight());
+		System.out.println("무게 : " + student1.getWeight());
+		System.out.println("학번 : " + student1.getStudentID());
 	}
 }
