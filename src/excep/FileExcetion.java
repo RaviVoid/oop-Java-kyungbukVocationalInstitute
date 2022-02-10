@@ -1,15 +1,26 @@
 package excep;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileInputStream;
 
 public class FileExcetion {
-
+	
+	
 	public static void main(String[] args) {
-		File file = new File("12466.txt");
+		File file = new File("1234.txt");
+		int data = 0;
 		try {
-			file.createNewFile();
-		} catch (IOException e) {}
+			FileInputStream fis = new FileInputStream(file);
+			
+			while((data = fis.read()) != -1) {
+				System.out.print((char)data);
+			}
+		} catch (Exception e1) {
+			
+		} finally {
+			fis.close(); //전역변수로 바꾸시오.			
+		}
+		
 		
 	}
 
