@@ -25,7 +25,7 @@ public class FileExcetion {
 		} finally {
 			
 			try {
-				fis.close();
+				if(fis != null) fis.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			} //전역변수로 바꾸시오.			
