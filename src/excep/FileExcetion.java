@@ -2,15 +2,20 @@ package excep;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 
 public class FileExcetion {
 	
 	
 	public static void main(String[] args) {
+		
 		File file = new File("1234.txt");
 		int data = 0;
+		FileInputStream fis = null;
+		
+		
 		try {
-			FileInputStream fis = new FileInputStream(file);
+			fis = new FileInputStream(file);
 			
 			while((data = fis.read()) != -1) {
 				System.out.print((char)data);
@@ -18,10 +23,15 @@ public class FileExcetion {
 		} catch (Exception e1) {
 			
 		} finally {
-			fis.close(); //전역변수로 바꾸시오.			
+			
+			try {
+				fis.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			} //전역변수로 바꾸시오.			
 		}
 		
-		
+
 	}
 
 }
